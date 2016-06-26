@@ -16,12 +16,12 @@
      
      
       <ul class="nav navbar-nav navbar-right">
-        <li> <%= link_to "Home", root_path%></li>
-        <li> <%= link_to "About", about_path%></li>
+        <li> <%= link_to raw('<span class="glyphicon glyphicon-home" aria-hidden="true"></span> Home'), root_path%></li>
+        <li> <%= link_to raw('<span class="glyphicon glyphicon-heart-empty" aria-hidden="true"></span>About'), about_path%></li>
         <% if user_signed_in? %>
-        <li> <%= link_to 'New Pin', new_pin_path %> </li>
-        <li><%= link_to "Account Settings", edit_user_registration_path%>
-        <li> <%= link_to "Log Out", destroy_user_session_path, method: :delete%></li>
+        <li> <%= link_to raw('<span class="glyphicon glyphicon-plus" aria-hidden="true"></span> New Pin'), new_pin_path %> </li>
+        <li><%= link_to raw('<span class="glyphicon glyphicon-wrench" aria-hidden="true"></span> Account Settings'), edit_user_registration_path%>
+        <li> <%= link_to raw('<span class="glyphicon glyphicon-log-out" aria-hidden="true"></span> Log Out'), destroy_user_session_path, method: :delete%></li>
 
         <% end %>
 
