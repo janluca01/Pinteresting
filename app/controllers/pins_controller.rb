@@ -5,8 +5,9 @@ class PinsController < ApplicationController
   
 
   def index
-    @pins = Pin.all.order("created_at DESC")
+   @pins = Pin.all.order("created_at DESC").paginate(:page => params[:page], :per_page => 8)
   end
+
 
   def show
   end
@@ -60,4 +61,4 @@ class PinsController < ApplicationController
     def pin_params
       params.require(:pin).permit(:description, :image)
     end
-end
+    end

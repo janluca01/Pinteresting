@@ -14,6 +14,8 @@ gem 'bootstrap-sass'
 gem 'devise', '~> 4.1.1.rc2'
 gem 'paperclip', '~> 4.2'
 gem 'masonry-rails', '~> 0.2.0'
+gem 'will_paginate'
+gem 'will_paginate-bootstrap'
 
 
 gem 'sdoc', '~> 0.4.0', group: :doc
